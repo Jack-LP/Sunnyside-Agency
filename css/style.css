@@ -187,7 +187,7 @@ nav{
 /* TESTIMONIALS START */
 
 .testimonials{
-    margin: 0 150px;
+    margin: 200px 150px;
     display: grid;
     column-gap: 60px;
     grid-template-columns: repeat(3 1fr);
@@ -204,7 +204,7 @@ nav{
     font-family: var(--fraunces-font);
     font-size: 1.6rem;
     color: var(--Grayish-blue);
-    margin: 200px 0 100px;
+    margin: 0 0 100px;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
@@ -259,4 +259,51 @@ nav{
     font-size: 1.2rem;
     color: var(--Grayish-blue);
     font-weight: 400;
+}
+
+/* TESTIMONIALS END */
+
+/* GALLERY START */
+
+.gallery{
+    display: flex;
+}
+.gallery img{
+    width: 25%;
+}
+
+/* GALLERY END */
+
+/* FOOTER START */
+
+.logo{
+    filter: invert(34%) sepia(92%) saturate(302%) hue-rotate(118deg) brightness(60%) contrast(83%);
+    width: 12rem;
+}
+
+footer{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #90d4c5;
+}
+
+.footer-nav{
+    list-style: none;
+    display: flex;
+}
+
+.footer-nav li{
+    margin: 0 25px;
+    font-family: var(--barlow-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--Dark-moderate-cyan);
+}
+
+.socials{
+    display: flex;
+    column-gap: 20px;
 }
