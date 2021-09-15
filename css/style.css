@@ -181,3 +181,82 @@ nav{
     line-height: 2rem;
     font-weight: 500;
 }
+
+/* GRID END */
+
+/* TESTIMONIALS START */
+
+.testimonials{
+    margin: 0 150px;
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: 
+    "title title title"
+    "card1 card2 card3";
+}
+
+.testimonials .title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    font-family: var(--fraunces-font);
+    font-size: 1.6rem;
+    color: var(--Grayish-blue);
+    margin: 200px 0 100px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.card1{
+    grid-area: card1;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 60px;
+}
+
+.card img{
+    border-radius: 50%;
+    width: 90px;
+}
+
+.card-text{
+    font-family: var(--barlow-font);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--Very-dark-grayish-blue);
+    text-align-last: center;
+}
+
+.name{
+    text-align-last: center;
+}
+
+.name h3{
+    font-family: var(--fraunces-font);
+    font-size: 1.4rem;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.name p{
+    margin-top: 20px;
+    font-family: var(--barlow-font);
+    font-size: 1.2rem;
+    color: var(--Grayish-blue);
+    font-weight: 400;
+}
