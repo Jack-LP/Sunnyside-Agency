@@ -24,48 +24,40 @@
     box-sizing: border-box;
 }
 
-.background-img{
-    background-image: url(/images/desktop/image-header.jpg);
-    background-position: bottom;
+.bg-image{
+    background: url(/images/desktop/image-header.jpg) no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    z-index: -1;
 }
 
 /* NAV START */
 
-.nav-items{
+.nav-ul{
     width: 600px;
 }
 
-nav img{
+nav .logo{
     width: 12rem;
     height: auto;
 }
 
-.nav-items li a{
+.nav-ul li a{
     padding: 2rem;
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
 }
 
-.nav-items li{
+.nav-ul li{
     list-style-type: none;
 }
 
-.nav-items li{
+.nav-ul li{
     font-family: var(--barlow-font);
     display: inline-block;
 }
 
-.nav-items li:last-child a{
+.nav-ul li:last-child a{
     font-family: var(--fraunces-font);
     background-color: #fff;
     color: var(--Very-dark-desaturated-blue);
@@ -75,20 +67,26 @@ nav img{
     font-size: 1.1rem;
 }
 
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
 nav{
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 /* NAV END */
 
 /* MAIN START  */
 
-.screen-height{
-    height: 89.4vh;
-}
 
 .landing{
     display: flex;
@@ -116,6 +114,34 @@ nav{
     display: grid;
     grid-template-columns: repeat(2,50%);
     grid-template-rows: repeat(3, 35%);
+    grid-template-areas: 
+    "text1 image1"
+    "image2 text2"
+    "image3 image4";
+}
+
+.text1{
+    grid-area: text1;
+}
+
+.text2{
+    grid-area: text2;
+}
+
+.image1{
+    grid-area: image1;
+}
+
+.image2{
+    grid-area: image2;
+}
+
+.image3{
+    grid-area: image3;
+}
+
+.image4{
+    grid-area: image4;
 }
 
 .text-section{
@@ -276,7 +302,7 @@ nav{
 
 /* FOOTER START */
 
-.logo{
+footer .logo{
     filter: invert(34%) sepia(92%) saturate(302%) hue-rotate(118deg) brightness(60%) contrast(83%);
     width: 12rem;
 }
@@ -306,4 +332,117 @@ footer{
 .socials{
     display: flex;
     column-gap: 20px;
+}
+
+/* FOOTER END */
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1600px) {
+    .text-on-img{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .text-on-img{
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .text-on-img h2{
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .landing h1{
+        font-size: 3.8rem;
+        font-family: var(--fraunces-font);
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 8px;
+        font-weight: 900;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .grid-section{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 15% 10% 15% 600px 600px;
+        grid-template-areas: 
+        "image1"
+        "text1"
+        "image2"
+        "text2"
+        "image3"
+        "image4";
+    }
+
+    .testimonials{
+        margin: 100px 20px;
+        display: grid;
+        grid-gap: 100px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas: 
+        "title"
+        "card1"
+        "card2"
+        "card3";
+    }
+
+    .testimonials .title{
+        grid-area: title;
+        display: flex;
+        justify-content: center;
+        font-family: var(--fraunces-font);
+        font-size: 1.3rem;
+        color: var(--Grayish-blue);
+        letter-spacing: 8px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .gallery img{
+        width: 100%;
+    }
+
+    .nav-ul{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-ul li a{
+        color: var(--Very-dark-desaturated-blue);
+        font-weight: 500;
+    }
+
+    .nav-ul li:last-child a{
+        background-color: var(--Yellow);
+    }
+
+    .nav-ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        row-gap: 50px;
+        margin-top: 40px;
+        background-color: white;
+        border-radius: 15px;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
 }
