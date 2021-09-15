@@ -25,7 +25,7 @@
 }
 
 .bg-image{
-    background: url(/images/desktop/image-header.jpg) no-repeat center center fixed;
+    background: url(/image-header.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
 }
